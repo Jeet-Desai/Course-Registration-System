@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/admin")
-//@SecurityRequirement(name = "BearerAuth")
 public class AdminController {
 
     @Autowired
