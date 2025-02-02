@@ -10,4 +10,4 @@ FROM alpine/java:21-jdk
 WORKDIR /app
 COPY --from=builder /app/target/CourseRegistrationSystem-0.0.1-SNAPSHOT.jar CourseRegistrationSystem.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar","app.jar"]
+ENTRYPOINT ["java", "-jar","CourseRegistrationSystem.jar"]
