@@ -72,7 +72,7 @@ public class CourseMapper {
 
         if (course.getSemesterList() != null && !course.getSemesterList().isEmpty()) {
 
-            courseDTO.setSemesterID(course.getSemesterList().getFirst().getId());
+            courseDTO.setSemesterID(course.getSemesterList().get(0).getId());
         }
 
         return courseDTO;
