@@ -29,6 +29,7 @@ public class SpringSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(cust->cust.disable())
+//                .formLogin(Customizer.withDefaults())
                 .httpBasic(Customizer.withDefaults())
                 .authorizeHttpRequests(request->request
                         .requestMatchers("login","register","/api/auth/**", "/swagger-ui/**", "/v3/api-docs/**")
