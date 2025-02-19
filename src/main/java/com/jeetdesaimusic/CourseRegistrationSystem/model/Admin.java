@@ -1,5 +1,6 @@
 package com.jeetdesaimusic.CourseRegistrationSystem.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Component;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Schema(hidden = true)
 public class Admin extends CRS_User {
     @Column(unique = true,nullable = false)
     private String adminCode;

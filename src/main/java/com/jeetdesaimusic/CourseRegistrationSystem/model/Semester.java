@@ -1,6 +1,7 @@
 package com.jeetdesaimusic.CourseRegistrationSystem.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,6 +16,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Schema(hidden = true)
 public class Semester {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

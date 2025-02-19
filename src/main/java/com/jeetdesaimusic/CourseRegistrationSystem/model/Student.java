@@ -1,5 +1,6 @@
 package com.jeetdesaimusic.CourseRegistrationSystem.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
+@Schema(hidden = true)
 public class Student extends CRS_User {
     @Column(unique = true,nullable = false)
     private String studentID;

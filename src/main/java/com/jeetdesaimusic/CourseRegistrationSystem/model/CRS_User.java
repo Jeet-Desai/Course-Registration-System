@@ -1,5 +1,6 @@
 package com.jeetdesaimusic.CourseRegistrationSystem.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.stereotype.Component;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Setter
 @Entity
+@Schema(hidden = true)
 public class CRS_User {
 
     @Id

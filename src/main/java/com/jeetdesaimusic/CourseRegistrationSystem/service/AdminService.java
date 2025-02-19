@@ -207,9 +207,9 @@ public class AdminService {
         sender.send(message);
     }
 
-    public void sendReminderToStudent(Student s,String deadline) {
+    public void sendReminderToStudent(Student s,String deadline,String semester) {
         String emailContent = "Dear " + s.getName() + ",\n\n" +
-                "You are requested to fill your registration form for the upcoming semester before " +
+                "You are requested to fill your registration form for the upcoming semester " + semester + " before " +
                 deadline + ".\n" +
                 "\nBest Regards,\nCourse Registration Team";
         SimpleMailMessage message = new SimpleMailMessage();
@@ -224,7 +224,7 @@ public class AdminService {
         List<Student> enrolled = sem.getRegisteredStudents();
         for(Student s : enrolled)
         {
-            sendReminderToStudent(s,deadline);
+            sendReminderToStudent(s,deadline,semesterName);
         }
     }
 
